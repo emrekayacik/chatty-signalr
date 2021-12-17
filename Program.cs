@@ -20,7 +20,7 @@ namespace SignalR
             Host.CreateDefaultBuilder(args)
                 .ConfigureWebHostDefaults(webBuilder =>
                 {
-                    webBuilder.UseStartup<Startup>();
+                    webBuilder.UseStartup<SignalRDemo.Startup>();
                 });
     }
 }

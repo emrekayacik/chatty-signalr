@@ -1,10 +1,47 @@
 ﻿@page
-@model IndexModel
-@{
-    ViewData["Title"] = "Home page";
-}
+<div class="container wrap mt-5">
+    <div class="row">
+        <div class="col-md-12">
+            <div class="panel panel-success">
+                <div class="panel-heading" id="accordion">
+                    <span class="glyphicon glyphicon-comment"></span>Chatty
+                    <div class="btn-group pull-right">
+                        <a type="button" class="btn btn-default btn-xs" data-toggle="collapse" data-parent="#accordion" href="#collapseOne">
+                            <i class="fas fa-arrow-down">Click Here</i>
+                        </a>
+                    </div>
+                </div>
+                <div class="panel-collapse collapse" id="collapseOne">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="panel-body">
+                                <ul id="messageList" class="chat">
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="panel-footer">
+                                <div class="input-group">
+                                    <div class="row">
+                                        <div class="col-sm-6">
+                                            <input type="text" id="userName" class="form-control input-sm" placeholder="Type your Name." />
 
-<div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+                                        </div>
+                                        <div class="col-sm-6">
+                                            <input type="text" id="userMessage" class="form-control input-sm" placeholder="Type your message here..." />
+                                        </div>
+                                    </div>
+                                    <span class="input-group-btn">
+                                        <input type="button" value="send" id="sendMessage" class="btn btn-danger btn-sm">
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 </div>
+
+<script src="~/lib/signalr/signalr.js"></script>
